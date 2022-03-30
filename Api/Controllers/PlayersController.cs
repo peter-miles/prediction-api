@@ -10,14 +10,14 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PlayerController : Controller
+    public class PlayersController : Controller
     {
         [HttpGet]
-        public List<Player> GetAllPlayers()
+        public List<Players> GetAllPlayers()
         {
-            List<Player> Players = new List<Player>();
+            List<Players> Players = new List<Players>();
 
-            using (SqlConnection sqlConnection = new SqlConnection("workstation id=nbaprediction.mssql.somee.com;packet size=4096;user id=teamsouth_SQLLogin_1;pwd=daouqkr2hp;data source=nbaprediction.mssql.somee.com;persist security info=False;initial catalog=nbaprediction"))
+            using (SqlConnection sqlConnection = new SqlConnection(" workstation id=nbaprediction.mssql.somee.com;packet size=4096;user id=teamsouth_SQLLogin_2;pwd=jg4pbomnhi;data source=nbaprediction.mssql.somee.com;persist security info=False;initial catalog=nbaprediction"))
             {
                 SqlCommand sqlCommand = new SqlCommand("SELECT * FROM PLAYERS", sqlConnection);
 
@@ -26,7 +26,7 @@ namespace Api.Controllers
                 {
                     while (sqlDataReader.Read())
                     {
-                        Player TempPlayer = new Player((int)sqlDataReader[0], sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), (float)sqlDataReader[3], (float)sqlDataReader[4]);
+                        Players TempPlayer = new Players((int)sqlDataReader[0], sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), (double)sqlDataReader[3], (double)sqlDataReader[4]);
                         Players.Add(TempPlayer);
                     }
                 }

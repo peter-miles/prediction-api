@@ -2,15 +2,15 @@
 
 namespace Lib
 {
-    public class Player
+    public class Players
     {
         public int playerId { get; set; }
         public string playerName { get; set; }
         public string playerTeam { get; set; }
-        public float playerMinutes { get; set; }
-        public float playerPlusMinus {get; set; }
+        public double playerMinutes { get; set; }
+        public double playerPlusMinus {get; set; }
 
-        public Player(int playerId, string playerName, string playerTeam, float playerMinutes, float playerPlusMinus)
+        public Players(int playerId, string playerName, string playerTeam, double playerMinutes, double playerPlusMinus)
         {
             this.playerId = playerId;
             this.playerName = playerName;
