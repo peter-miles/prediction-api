@@ -4,19 +4,19 @@ namespace Lib
 {
     public class Player
     {
-        public int PlayerID { get; set; }
-        public string PlayerName { get; set; }
-        public string PlayerTeam { get; set; }
-        public float PlayerMinutes { get; set; }
-        public float PlayerPlusMinus {get; set; }
+        public int playerId { get; set; }
+        public string playerName { get; set; }
+        public string playerTeam { get; set; }
+        public float playerMinutes { get; set; }
+        public float playerPlusMinus {get; set; }
 
-        public Player(int PlayerID, string PlayerName, string PlayerTeam, float PlayerMinutes, float PlayerPlusMinus)
+        public Player(int playerId, string playerName, string playerTeam, float playerMinutes, float playerPlusMinus)
         {
-            this.PlayerID = PlayerID;
-            this.PlayerName = PlayerName;
-            this.PlayerTeam = PlayerTeam;
-            this.PlayerMinutes = PlayerMinutes;
-            this.PlayerPlusMinus = PlayerPlusMinus;
+            this.playerId = playerId;
+            this.playerName = playerName;
+            this.playerTeam = playerTeam;
+            this.playerMinutes = playerMinutes;
+            this.playerPlusMinus = playerPlusMinus;
         }
     }
 }
