@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Lib
+﻿namespace Lib
 {
-    public class Players
+    public class Player
     {
         public int playerId { get; set; }
         public string playerName { get; set; }
@@ -10,7 +8,7 @@ namespace Lib
         public double playerMinutes { get; set; }
         public double playerPlusMinus {get; set; }
 
-        public Players(int playerId, string playerName, string playerTeam, double playerMinutes, double playerPlusMinus)
+        public Player(int playerId, string playerName, string playerTeam, double playerMinutes, double playerPlusMinus)
         {
             this.playerId = playerId;
             this.playerName = playerName;
